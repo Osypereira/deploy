@@ -21,10 +21,11 @@ const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 const { Country } = require("./src/db.js");
 const axios = require("axios");
+const PORT = process.env.PORT || 3001;
 
 // Syncing all the models at once.
 conn.sync({ force: false }).then(() => {
-  server.listen(3001, async () => {
+  server.listen(PORT, async () => {
     const allCountries = await Country.findAll();
     if (!allCountries.length) {
       const { data } = await axios.get("https://restcountries.com/v3/all");
@@ -44,6 +45,6 @@ conn.sync({ force: false }).then(() => {
       })
       await Country.bulkCreate(countriesMap);
     }
-    console.log('%s listening at 3001'); // eslint-disable-line no-console
+    console.log('%s listening at', PORT); // eslint-disable-line no-console
   });
 });
