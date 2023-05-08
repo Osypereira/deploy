@@ -1,0 +1,16 @@
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 1rem 1rem rgb(132, 160, 172);
+}
+
+.card img{ 
+    width:100%;  
+    object-fit:contain;
+    padding: 0.5px;
+    background-color: rgb(14, 14, 94);
+}
+.card{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+

@@ -1,0 +1,73 @@
+.container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(10, 11, 10);
+    margin: 0 auto;
+    align-items: center;
+}
+
+.containerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background: url(./../../images/detail.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    border: 1px solid rgb(20, 45, 70);
+    padding: 50px;
+    text-align: start;
+    width: 50vh;
+    max-width: 50vw;
+    height: 50vh;
+    animation-name: borderColorChange;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    justify-content: center;
+    float: left;
+}
+       .deleteButton {
+    
+        background-color: rgb(189, 183, 107);
+        border-radius: 50px;
+        width: 40px;
+        height: 40px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        
+       }
+       
+       .lether {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 13px;
+        background-color: rgba(208, 255, 0, 0);
+         justify-content: center;
+        -webkit-text-fill-color: rgb(159, 173, 83);
+       }
+       .containerForm .button{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        position: absolute;
+        margin-left: 10%;
+        margin-top: 20px;
+        border-radius: 10px;
+        height: 30px;
+        background-color: rgba(189, 183, 107, 0.507);
+       }
+       .containerForm input, .containerForm select{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        border: 2px solid black;
+        width: 200px;
+        margin-top: 10px;
+       }
+       .countriesFlags {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        height: 200px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        float: left;
+        width: 200px;
+        position: absolute;
+        margin-left: 20px;
+        margin-top: 400px;
+        
+       }
