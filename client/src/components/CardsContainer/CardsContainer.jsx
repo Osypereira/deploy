@@ -27,7 +27,7 @@ const CardsContainer = () => {
         dispatch(getAllActivities())
     }, [dispatch])
 
-    useEffect(() => {
+    useEffect(() => {   //cada vez que cambie se va a ejecuta de nuevo
         filterCountries()
     }, [continent,    // eslint-disable-line
         touristActivity,
