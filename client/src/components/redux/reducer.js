@@ -14,7 +14,7 @@ const initialState = {
     pag: 1,
 }
 
-const rootReducer = (state = initialState, action) => {
+const rootReducer = (state = initialState, action) => { //defino 
     switch (action.type) {
         case GET_ALL_COUNTRIES:
             return {
@@ -44,6 +44,7 @@ const rootReducer = (state = initialState, action) => {
         case GET_BY_NAME:
             return {
                 ...state,
+                pag: 1,
                 countries: action.payload
             }
         case FILTER:

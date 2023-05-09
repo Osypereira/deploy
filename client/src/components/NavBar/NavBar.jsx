@@ -18,7 +18,7 @@ const NavBar = () => {
                 <button className={style.button2}>FORM</button>
             </Link>
             <form onChange={handleChange}>
-                <input type="Search" />
+                <input type="Search" placeholder="SEARCH..." />
             </form>
         </div>
     )

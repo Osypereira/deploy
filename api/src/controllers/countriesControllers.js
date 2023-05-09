@@ -14,6 +14,7 @@ const getCountryById = async (id) => {
 //----------------------------------------------------------------//
 
 const getcountries = (async () => {
+    
     const dbCountry = await Country.findAll({
         attributes: ["id", "name", "imgflag", "continent", "capital", "subregion", "area", "population"],
 

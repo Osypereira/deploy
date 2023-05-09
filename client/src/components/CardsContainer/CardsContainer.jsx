@@ -27,8 +27,8 @@ const CardsContainer = () => {
         dispatch(getAllActivities())
     }, [dispatch])
 
-    useEffect(() => {   //cada vez que cambie se va a ejecuta de nuevo
-        filterCountries()
+    useEffect(() => {
+        filterCountries()   //cada vez que cambie se va a ejecuta de nuevo
     }, [continent,    // eslint-disable-line
         touristActivity,
         order
@@ -64,7 +64,7 @@ const CardsContainer = () => {
                    <option value="Africa" key={4}>AFRICA</option>
                    <option value="Antarctica" key={5}>ANTARCTICA</option>
                    <option value="Europe" key={6}>EUROPE</option>
-                   <option value="Oceania" key={7}>ACEANIA</option>
+                   <option value="Oceania" key={7}>OCEANIA</option>
                </select>
 
                <select value={touristActivity}
@@ -81,6 +81,10 @@ const CardsContainer = () => {
                     <option value="poblationAscending" key={3}>Poblation Ascending</option>
                     <option value="poblationDescending" key={4}>Poblation Descending</option>
                 </select>
+                <button 
+            type="button"
+            onClick={() => (setOrder(''), setTouristActivity(''), setContinent(''))}
+            >Limpiar</button>
                 
                <Paginado
                     countriesPerPage={countriesPerPage}

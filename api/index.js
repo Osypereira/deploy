@@ -25,7 +25,7 @@ const PORT = process.env.PORT || 3001;
 
 // Syncing all the models at once.
 conn.sync({ force: false }).then(() => {
-  server.listen(PORT, async () => {
+  server.listen(PORT, "0.0.0.0", async () => {
     const allCountries = await Country.findAll();
     if (!allCountries.length) {
       const { data } = await axios.get("https://restcountries.com/v3/all");
