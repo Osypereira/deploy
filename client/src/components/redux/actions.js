@@ -5,7 +5,7 @@ import axios from "axios";
 export function getAllCountries() {
     return async (dispatch) => {
         try {
-            const results = await axios.get("http://localhost:3001/country")
+            const results = await axios.get("/country")
             dispatch({ type: GET_ALL_COUNTRIES, payload: results.data})
         } catch (error) {
             console.log("error", error.message);
@@ -23,7 +23,7 @@ export const pagNum = (number) => {
 export function getAllActivities() {
     return async(dispatch) => {
         try {
-            const result = await axios.get("http://localhost:3001/activity")
+            const result = await axios.get("/activity")
             dispatch({ type: GET_ALL_ACTIVITIES, payload: result.data})
         } catch (error) {
             console.log("error", error.message)
@@ -35,7 +35,7 @@ export const getDetail = (id) => {
     return async (dispatch) => {
         
         try {
-            const json = await axios.get(`http://localhost:3001/country/${id}`);
+            const json = await axios.get(`/country/${id}`);
            
             
             dispatch({
@@ -50,7 +50,7 @@ export const getDetail = (id) => {
 export  function getByName (name)  {
     return async (dispatch) => {
         try {
-            const res = await axios.get(`http://localhost:3001/country?name=${name}`)
+            const res = await axios.get(`/country?name=${name}`)
             console.log(res.data);
             dispatch({
                 type: GET_BY_NAME,
@@ -65,7 +65,7 @@ export function postActivities(activity) {
     return async () => {
         try {
             console.log(activity)
-            await axios.post("http://localhost:3001/activity", activity)
+            await axios.post("/activity", activity)
             return
        } catch (error) {
            console.log(error);
